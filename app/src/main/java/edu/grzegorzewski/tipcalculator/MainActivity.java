@@ -20,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Create EditText and Button objects variables and initialize them to screen widgets.
         final EditText mealCost = (EditText) findViewById(R.id.editText1);
         final EditText taxPercentage = (EditText) findViewById(R.id.editText2);
         final EditText tipPercentage = (EditText) findViewById(R.id.editText3);
         final EditText mealTotalCost = (EditText) findViewById(R.id.editText4);
         Button calculateButton = (Button) findViewById(R.id.button1);
 
-        //
+        // Calculate button listener.
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
