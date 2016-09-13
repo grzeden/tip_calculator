@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText mealTotalCost = (EditText) findViewById(R.id.editText4);
         Button calculateButton = (Button) findViewById(R.id.button1);
 
+        //
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
                         & !tipPercentage.getText().toString().isEmpty()){
 
                     try {
-                        // Calculated the total meal cost
+                        // Calculate the total meal cost, including tip and tax.
                         double calculation = Double.parseDouble(mealCost.getText().toString())
                                 + (Double.parseDouble(taxPercentage.getText().toString()) + Double.parseDouble(tipPercentage.getText().toString())
                                 * (Double.parseDouble(mealCost.getText().toString())
                                 / 100));
-                        // Set the total meal cost field
+                        // Set the total meal cost field.
                         mealTotalCost.setText(String.valueOf(calculation));
                     }
                     catch (NumberFormatException e) {
