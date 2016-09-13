@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                // If the input fields are populated
+                // If the input fields are populated.
                 if (!mealCost.getText().toString().isEmpty()
                         & !taxPercentage.getText().toString().isEmpty()
                         & !tipPercentage.getText().toString().isEmpty()){
